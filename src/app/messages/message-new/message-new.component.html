@@ -1,0 +1,42 @@
+<mat-horizontal-stepper [linear]="true" #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-component matStepLabel>Enter recipient info</ng-component>
+      <mat-form-field>
+        <input matInput placeholder="Email" formControlName="emailctrl" required>
+      </mat-form-field>
+      <div>
+          <button mat-icon-button matStepperNext>
+              <mat-icon>arrow_forward</mat-icon>
+            </button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup">
+    <form [formGroup]="secondFormGroup">
+      <mat-form-field>
+        <input matInput placeholder="Message" formControlName="messagectrl" required>
+      </mat-form-field>
+      <div>
+        <button mat-icon-button matStepperPrevious>
+          <mat-icon>arrow_back</mat-icon>
+        </button>
+        <button mat-icon-button matStepperNext>
+            <mat-icon>mail_outline</mat-icon>
+          </button>
+      </div>
+    </form>
+  </mat-step>
+  <mat-step [optional]="true">
+    <ng-template matStepLabel>previwe</ng-template>
+    <p>message sent</p>
+    <div>
+        <button mat-icon-button matStepperPrevious>
+            <mat-icon>arrow_back</mat-icon>
+          </button>
+          <button mat-icon-button (click)="stepper.reset()">
+              <mat-icon>refresh</mat-icon>
+            </button>
+    </div>
+  </mat-step>
+</mat-horizontal-stepper>
