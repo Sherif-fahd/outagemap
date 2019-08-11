@@ -5,21 +5,10 @@ import { CustomerCardComponent} from './customer-card/customer-card.component';
 import { CustomersDetailsComponent } from './customers-details/customers-details.component';
 
 const routes: Routes = [
-  {
-    path: '',
-    component: CustomersListComponent
+  {path: '', component: CustomersListComponent},
+  {path: 'customers-details', component: CustomersDetailsComponent},
+  {path: 'customers-details/:id', component: CustomerCardComponent},
 
-  },
-
-  {
-  path: 'info',
-  component: CustomerCardComponent
-  },
-
-  {
-    path: 'customers-details',
-    component: CustomersDetailsComponent
-  },
 
 ];
 
@@ -28,3 +17,7 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class CustomersRoutingModule { }
+export const routingcomponents = [
+                                  CustomersDetailsComponent,
+                                  CustomerCardComponent
+]
