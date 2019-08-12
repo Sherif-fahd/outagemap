@@ -1,49 +1,58 @@
-
-
-<div class="container">
+<div class="container customerslist">
   <div class="row">
     <div class="col-sm-12">
-        <div class="table-wrapper">
-            <div class="table-title">
-                <div class="row">
-          <div class="col-md-6">
-                <h2>Customer Details</h2>
-          </div>
-                    <div class="col-md-6">
-                        <div class="search-box">
-              <div class="input-group">
-                <input type="text" id="search" class="form-control" placeholder="Search by Name">
-                                <span class="input-group-addon"><i class="material-icons">&#xE8B6;</i></span>
-              </div>
-                        </div>
-                    </div>
-                </div>
+      <div class="table-wrapper">
+        <div class="table-title">
+          <div class="row">
+            <div class="col-md-6">
+              <h2>Customer Details</h2>
             </div>
-            <table class="table table-striped">
-                <thead>
-                    <tr>
-                        <th>#</th>
-                        <th style="width: 22%;">Name</th>
-                        <th style="width: 22%;">Address</th>
-                        <th style="width: 22%;">Department Name</th>
-                        <th>Action</th>
-
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr *ngFor ="let customer of customers; index as customerId" >
-                        <td>{{customer.id}}</td>
-                        <td>{{customer.name}}</td>
-                        <td>{{customer.address}}</td>
-                        <td>{{customer.departmentname}}</td>
-                        <td>
-                            <a (click)="onSelect(customer)" class="edit" title="Edit" data-toggle="tooltip"><i class="material-icons">&#xE254;</i></a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="col-md-6">
+                <div class="form-group has-search">
+                    <span class="fa fa-search form-control-feedback"></span>
+                    <input type="text" class="form-control" placeholder="Search by Name">
+                  </div>
+            </div>
+          </div>
         </div>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th style="width: 22%;">Name</th>
+              <th style="width: 22%;">Address</th>
+              <th style="width: 22%;">Department Name</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let customer of customers; index as customerId">
+              <td>{{ customer.id }}</td>
+              <td>{{ customer.name }}</td>
+              <td>{{ customer.address }}</td>
+              <td>{{ customer.departmentname }}</td>
+              <td>
+                <a
+                  [routerLink]="['./', customer.id]"
+                  class="edit"
+                  title="Edit"
+                  data-toggle="tooltip"
+                  ><i class="material-icons">&#xE254;</i></a
+                >
+                <a
+                  [routerLink]="['./', customer.id]"
+                  class="edit"
+                  title="Edit"
+                  data-toggle="tooltip"
+                  ><i class="material-icons">
+                      location_on
+                  </i>
+                  </a>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
     </div>
   </div>
-
 </div>

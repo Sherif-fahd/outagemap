@@ -26,7 +26,7 @@ import { MatInputModule } from '@angular/material/Input';
 
 
 @NgModule({
-  declarations: [CustomersListComponent, CustomerCardComponent, CustomersDetailsComponent],
+  declarations: [CustomersListComponent, CustomerCardComponent, CustomersDetailsComponent,],
 
   imports: [
     CommonModule,

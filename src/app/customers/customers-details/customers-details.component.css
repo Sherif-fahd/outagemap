@@ -1,3 +1,8 @@
+.customerslist{
+  padding-top: 100px;
+
+}
+
 .table-wrapper {
   background: #fff;
   padding: 20px 25px;
@@ -7,7 +12,7 @@ border-radius: 3px;
 }
 .table-title {
 color: #fff;
-background: #40b2cd;
+background: #34393d;
 padding: 16px 25px;
 margin: -20px -25px 10px;
 border-radius: 3px 3px 0 0;
@@ -92,4 +97,18 @@ table.table td a.delete {
 table.table td i {
   font-size: 19px;
 }
+.has-search .form-control {
+  padding-left: 2.375rem;
+}
 
+.has-search .form-control-feedback {
+  position: absolute;
+  z-index: 2;
+  display: block;
+  width: 2.375rem;
+  height: 2.375rem;
+  line-height: 2.375rem;
+  text-align: center;
+  pointer-events: none;
+  color: #aaa;
+}

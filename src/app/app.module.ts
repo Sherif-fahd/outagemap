@@ -15,10 +15,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MenuComponent } from './nav/menu/menu.component';
 
+
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
+
   ],
 
 

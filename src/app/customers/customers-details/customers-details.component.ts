@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Customers } from '../_model/customer';
 import { CustomerDataService } from '../srevices/customer-data.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -9,19 +9,13 @@ import { Router } from '@angular/router';
   templateUrl: './customers-details.component.html',
   styleUrls: ['./customers-details.component.css']
 })
-export class CustomersDetailsComponent   {
+export class CustomersDetailsComponent  implements OnInit {
   customers: Customers[];
 
 
-  constructor(private data: CustomerDataService, private router: Router) {
+  constructor(private data: CustomerDataService, private activerouter: ActivatedRoute) {
+  }
+  ngOnInit() {
     this.customers = this.data.getData();
   }
-  onSelect(customer) {
-    this.router.navigate(['/customers-details', customer.id]);
-
-  }
-
-
-
-
 }

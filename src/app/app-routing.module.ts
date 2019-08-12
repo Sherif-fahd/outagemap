@@ -1,10 +1,21 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
+
 const routes: Routes = [
+
   {
     path: 'customers',
-    loadChildren: './customers/customers.module#CustomersModule'
+    children: [
+      {
+        path: '',
+        loadChildren: './customers/customers.module#CustomersModule'
+      },
+      {
+        path: ':customerId',
+        loadChildren: './customers/customer-card/customers.module#Customersodule'
+      }
+    ]
   },
 
   {
@@ -20,7 +31,7 @@ const routes: Routes = [
     path: '',
     redirectTo: '',
     pathMatch: 'full'
-  }
+  },
 
 ];
 

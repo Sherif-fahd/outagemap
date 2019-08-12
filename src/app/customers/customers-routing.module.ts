@@ -17,7 +17,4 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class CustomersRoutingModule { }
-export const routingcomponents = [
-                                  CustomersDetailsComponent,
-                                  CustomerCardComponent
-]
+
