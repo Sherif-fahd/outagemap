@@ -9,28 +9,24 @@
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
   <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-
-  <script type="text/javascript">
-$(document).ready(function(){
-	// Activate tooltips
-	$('[data-toggle="tooltip"]').tooltip();
-
-	// Filter table rows based on searched term
-    $("#search").on("keyup", function() {
-        var term = $(this).val().toLowerCase();
-        $("table tbody tr").each(function(){
-            $row = $(this);
-            var name = $row.find("td:nth-child(2)").text().toLowerCase();
-            console.log(name);
-            if(name.search(term) < 0){
-                $row.hide();
-            } else{
-                $row.show();
+  <script>
+    var dojoConfig = {
+        async: true,
+        packages: [
+            {
+                name: 'OutageApp',
+                location: location.pathname.replace(/[^\/]+$/, '') + 'JS'
             }
-        });
-    });
-});
+        ]
+    };
 </script>
+<script src="JS/SwitchFancy.js"></script>
+<script src="https://js.arcgis.com/3.25/"></script>
+<link href="CSS/Main.css" rel="stylesheet" />
+<link href="CSS/SwitchFancy.css" rel="stylesheet" />
+<script src="Config.js"></script>
+<script src="JS/Main.js"></script>
+
 </head>
 <body>
   <app-root></app-root>

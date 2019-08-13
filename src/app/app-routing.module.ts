@@ -12,9 +12,17 @@ const routes: Routes = [
         loadChildren: './customers/customers.module#CustomersModule'
       },
       {
+        path: 'coustomers-details',
+        loadChildren: './customers/customers-details/customers.module#CustomersModule'
+      },
+      {
         path: ':customerId',
         loadChildren: './customers/customer-card/customers.module#Customersodule'
-      }
+      },
+      {
+        path: ':customerAddress',
+        loadChildren: './customers/location-map/customers.module#Customersodule'
+      },
     ]
   },
 

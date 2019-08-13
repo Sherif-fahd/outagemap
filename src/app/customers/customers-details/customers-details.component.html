@@ -10,7 +10,7 @@
             <div class="col-md-6">
                 <div class="form-group has-search">
                     <span class="fa fa-search form-control-feedback"></span>
-                    <input type="text" class="form-control" placeholder="Search by Name">
+                    <input type="text" #input [(ngModel)]="name" (input)="search()" class="form-control" placeholder="Search by Name">
                   </div>
             </div>
           </div>
@@ -40,7 +40,7 @@
                   ><i class="material-icons">&#xE254;</i></a
                 >
                 <a
-                  [routerLink]="['./', customer.id]"
+                  [routerLink]="['./', customer.address]"
                   class="edit"
                   title="Edit"
                   data-toggle="tooltip"
@@ -56,3 +56,4 @@
     </div>
   </div>
 </div>
+

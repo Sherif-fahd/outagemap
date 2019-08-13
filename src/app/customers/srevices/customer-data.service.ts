@@ -79,5 +79,13 @@ export class CustomerDataService {
       })
     };
   }
+  getCustomerLocation(customerAddress: string) {
+    return {
+      ...this.data.find(customer => {
+        return customer.address === customerAddress;
+
+      })
+    };
+  }
 
 }
