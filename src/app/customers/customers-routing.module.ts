@@ -9,10 +9,9 @@ const routes: Routes = [
   {path: '', component: CustomersListComponent},
   {path: 'customers-details', component: CustomersDetailsComponent},
   {path: 'customers-details/:id', component: CustomerCardComponent},
-  {path: 'location-map/:address', component: LocationMapComponent},
-  {path: 'location-map', component: LocationMapComponent}
-
-
+  {path: 'customers-details/:address', component: LocationMapComponent},
+  {path: 'location-map', component: LocationMapComponent},
+  {path: 'customer-card', component: CustomerCardComponent},
 
 ];
 

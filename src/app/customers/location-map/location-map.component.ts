@@ -22,7 +22,7 @@ export class LocationMapComponent implements OnInit {
         return;
       }
       const customerAddress = paramMap.get('customerAddress');
-      this.loadedcustomer = this.data.getCustomerLocation(this.loadedcustomer.address);
+      this.loadedcustomer = this.data.getCustomerLocation(customerAddress);
     });
   }
 

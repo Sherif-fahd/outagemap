@@ -24,8 +24,8 @@ export class CustomerCardComponent implements OnInit {
           return;
         }
         const customerId = paramMap.get('customerId');
-        this.loadedcustomer = this.data.getCustomer(this.loadedcustomer.id);
-        this.customerId = this.loadedcustomer;
+        this.loadedcustomer = this.data.getCustomer(customerId);
+        this.customerId = this.loadedcustomer.id;
       });
     }
     gotoCustomerslist() {

@@ -16,12 +16,12 @@ const routes: Routes = [
         loadChildren: './customers/customers-details/customers.module#CustomersModule'
       },
       {
-        path: ':customerId',
-        loadChildren: './customers/customer-card/customers.module#Customersodule'
+        path: 'customers-details/:customerId',
+        loadChildren: './customers/customer-card/customer-card.module#Customersodule'
       },
       {
         path: ':customerAddress',
-        loadChildren: './customers/location-map/customers.module#Customersodule'
+        loadChildren: './customers/location-map/location-map.module#Customersodule'
       },
     ]
   },
